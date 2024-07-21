@@ -83,15 +83,15 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"",
     image: lc,
-    rating:"1660",
-    count:"383"
+    rating:"1674",
+    count:"430"
   },
   {
     title: "Codechef",
     link:"https://www.codechef.com/users/beingankur",
     des:"3 star",
     image: cc,
-    rating:"1616",
+    rating:"1621",
     count:"157"
   },
   {
@@ -100,6 +100,6 @@ export const STATS=[
     des:"Pupil",
     image: cf,
     rating:"1224",
-      count:"253"
+      count:"273"
   },
 ]
