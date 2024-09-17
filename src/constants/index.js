@@ -83,8 +83,8 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"",
     image: lc,
-    rating:"1674",
-    count:"430"
+    rating:"1754",
+    count:"517"
   },
   {
     title: "Codechef",
@@ -100,6 +100,6 @@ export const STATS=[
     des:"Pupil",
     image: cf,
     rating:"1224",
-      count:"273"
+      count:"264"
   },
 ]
