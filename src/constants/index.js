@@ -83,23 +83,23 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"",
     image: lc,
-    rating:"1754",
-    count:"517"
+    rating:"1776",
+    count:"667"
   },
   {
     title: "Codechef",
     link:"https://www.codechef.com/users/beingankur",
     des:"3 star",
     image: cc,
-    rating:"1621",
-    count:"157"
+    rating:"1669",
+    count:"194"
   },
   {
     title: "Codeforces",
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1224",
-      count:"264"
+    rating:"1248",
+      count:"339"
   },
 ]
