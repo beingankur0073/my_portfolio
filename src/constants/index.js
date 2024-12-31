@@ -84,7 +84,7 @@ export const STATS=[
     des:"",
     image: lc,
     rating:"1776",
-    count:"667"
+    count:"668"
   },
   {
     title: "Codechef",
