@@ -45,8 +45,6 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Priti Apartment,Hridaypur Station Road,Barasat,Kolkata-700127",
-  phoneNo: "+91 9123865346",
   email: "mukherjeeankur0073@gmail.com",
 };
 
@@ -83,15 +81,15 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"",
     image: lc,
-    rating:"1776",
-    count:"668"
+    rating:"1813",
+    count:"801"
   },
   {
     title: "Codechef",
     link:"https://www.codechef.com/users/beingankur",
     des:"3 star",
     image: cc,
-    rating:"1669",
+    rating:"1670",
     count:"194"
   },
   {
