@@ -22,17 +22,16 @@ In addition to web development, I have a strong interest in data structures and 
 
 export const PROJECTS = [
   {
-    title: "Memory Game",
+    title: "Real-Time Chat Application",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+      "A full-stack real-time chat application using React, Redux Toolkit, Node.js, Express.js, and MongoDB, with Socket.io for instant messaging. Implemented secure authentication using JWT, real-time notifications, and media uploads via Cloudinary. Designed an optimized database schema for efficient message retrieval with pagination. Integrated friend requests, group chats, and read receipts. Built a feature-rich admin dashboard to manage users, monitor conversations",
+    technologies: ["ReactJS", "Bootstrap", "NodeJS", "MongoDB", "Socket.io", "Express"],
   },
   {
-    title: "Todo Application",
+    title: "White-Board Sharing app",
     image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+    description:"A real-time whiteboard sharing application using React, Rough.js, and Socket.IO, allowing users to draw with tools like pencil, rectangle. Created a responsive UI and integrated Rough.js for hand-drawn graphics. Built a Node.js server with Express.js for room management and real-time updates, using UUID for unique room IDs. Ensured seamless synchronization of drawing actions across clients through Socket.IO, and enhanced the user experience with features like canvas clearing and tool switching.",
     technologies: ["HTML", "CSS", "React", "Express","MongoDB","Node.js"],
   },
   {

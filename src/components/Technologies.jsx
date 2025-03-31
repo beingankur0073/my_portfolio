@@ -1,10 +1,11 @@
 import {RiReactjsLine} from 'react-icons/ri'
 import {TbBrandNextjs} from 'react-icons/tb'
-import {SiMongodb} from 'react-icons/si'
 import {FaNodeJs} from 'react-icons/fa'
 import { TbBrandCpp } from "react-icons/tb";
-import {SiJavascript} from 'react-icons/si'
+import { SiMongodb, SiJavascript, SiPython } from 'react-icons/si';
+
 import { animate, motion } from "framer-motion"
+
 
 const iconVaraints=(duration)=>(
     {
@@ -43,13 +44,13 @@ const Technologies=()=>{
                 <RiReactjsLine className='text-7xl text-cyan-400'/>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
              variants={iconVaraints(2.5)}
              initial="initail"
              animate="animate"
              className="rounded-2xl border-4 border-neutral-800 p-4">
                 <TbBrandNextjs className='text-7xl'/>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
              variants={iconVaraints(4)}
@@ -82,6 +83,11 @@ const Technologies=()=>{
             className="rounded-2xl border-4 border-neutral-800 p-4">
                 <SiJavascript className='text-7xl text-yellow-500'/>
             </motion.div>
+
+
+            <motion.div variants={iconVaraints(3.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
+                    <SiPython className="text-7xl text-blue-500" />
+                </motion.div>
 
            
         </motion.div>
