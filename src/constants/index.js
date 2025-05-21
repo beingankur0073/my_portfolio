@@ -80,7 +80,7 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"",
     image: lc,
-    rating:"1813",
+    rating:"1870",
     count:"801"
   },
   {

@@ -2,7 +2,7 @@ import {RiReactjsLine} from 'react-icons/ri'
 import {TbBrandNextjs} from 'react-icons/tb'
 import {FaNodeJs} from 'react-icons/fa'
 import { TbBrandCpp } from "react-icons/tb";
-import { SiMongodb, SiJavascript, SiPython } from 'react-icons/si';
+import { SiMongodb, SiJavascript, SiPython,SiTailwindcss,SiExpress } from 'react-icons/si';
 
 import { animate, motion } from "framer-motion"
 
@@ -87,6 +87,33 @@ const Technologies=()=>{
 
             <motion.div variants={iconVaraints(3.5)} initial="initial" animate="animate" className="rounded-2xl border-4 border-neutral-800 p-4">
                     <SiPython className="text-7xl text-blue-500" />
+                </motion.div>
+
+                <motion.div
+                variants={iconVaraints(2.8)}
+                initial="initial"
+                animate="animate"
+                className="rounded-2xl border-4 border-neutral-800 p-4"
+                >
+                <SiTailwindcss className="text-7xl text-sky-400" />
+                </motion.div>
+
+                {/* <motion.div
+                variants={iconVaraints(3.2)}
+                initial="initial"
+                animate="animate"
+                className="rounded-2xl border-4 border-neutral-800 p-4"
+                >
+                <SiMaterialui className="text-7xl text-indigo-500" />
+                </motion.div> */}
+
+                <motion.div
+                variants={iconVaraints(3.8)}
+                initial="initial"
+                animate="animate"
+                className="rounded-2xl border-4 border-neutral-800 p-4"
+                >
+                <SiExpress className="text-7xl text-white" />
                 </motion.div>
 
            
