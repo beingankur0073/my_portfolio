@@ -1,5 +1,5 @@
 import {HERO_CONTENT} from '../constants/index.js'
-import profilePic from "../assets/images/pfpic.jpeg"
+import profilePic from "../assets/images/pfpic_2.jpg"
 import { motion } from "framer-motion"
 
 const container=(delay)=>({
@@ -36,18 +36,23 @@ const Hero=()=>{
                          variants={container(1)}
                          initial="hidden"
                          animate="visible"
-                    className='my-2 max-w-xl py-6 font-light tracking-tighter'>{HERO_CONTENT}</motion.p>
+                    className='my-2 max-w-xl py-6 font-light tracking-tighter'>
+                        <p dangerouslySetInnerHTML={{ __html: HERO_CONTENT }} />
+                    </motion.p>
                 </div>
             </div>
 
             <div className='w-full lg:w-1/2 lg:p-8'>
-                <div className='flex justify-center'>
-                 <motion.img className='rounded-2xl' initial={{x:100,opacity:0}} 
+                <div className='flex justify-start'>
+                 <motion.img 
+                 className="rounded-2xl m-auto lg:w-[500px]" 
+                 initial={{ x: 100, opacity: 0 }}
                  animate={{x:0,opacity:1}}
                  transition={{duration:1,delay:1.2}}
                   src={profilePic} alt="Ankur Mukherjee" />
                 </div>
             </div>
+
 
         </div>
     </div>

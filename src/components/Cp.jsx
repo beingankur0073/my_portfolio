@@ -35,15 +35,11 @@ const AnimatedNumber = ({ value, trigger }) => {
 const CPStats = () => {
     const sectionRef = useRef(null);
     const isInView = useInView(sectionRef, {
-        // 🔥 removed once: true
-        threshold: 0.3, // adjust as needed
+        threshold: 0.3,
     });
 
     return (
-        <div
-            ref={sectionRef}
-            className="border-b border-neutral-900 pb-4"
-        >
+        <div ref={sectionRef} className="border-b border-neutral-900 pb-4">
             <motion.h2
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
@@ -63,7 +59,7 @@ const CPStats = () => {
                     <a
                         href={plat.link}
                         key={index}
-                        className="w-full max-w-xl lg:w-1/6 flex flex-col items-center bg-neutral-900 pt-3 rounded-2xl hover:bg-violet-600"
+                        className="w-60 h-70 flex flex-col items-center bg-neutral-900 pt-3 rounded-2xl hover:bg-violet-600 transition-all duration-300"
                     >
                         <img
                             width={100}
@@ -72,9 +68,27 @@ const CPStats = () => {
                             src={plat.image}
                             alt={plat.title}
                         />
-                        <p className="font-bold text-xl mb-2">{plat.title}</p>
-                      <div className="flex flex-col items-center px-2 text-sm gap-1 mb-4">
-                            
+
+                        <p className="font-bold text-xl mb-1 text-center">{plat.title}</p>
+
+                        
+                        <p className="text-neutral-400 text-sm text-center px-2 mb-2">
+                            {plat.des}
+                        </p>
+
+                        {plat.badgeImg && (
+                            <img
+                                src={plat.badgeImg}
+                                alt="badge"
+                                className={`mb-1
+                                ${plat.title === "LeetCode" ? "w-10 h-11" : ""}
+                                ${plat.title === "Codechef" ? "w-50 h-8" : ""}
+                                ${plat.title === "Codeforces" ? "w-6 h-6" : ""}
+                                `}
+                            />
+                            )}
+
+                        <div className="flex flex-col items-center px-2 text-sm gap-1 mb-4">
                             <p className="font-semibold">
                                 Max-Rating:{" "}
                                 <span className="font-light">
@@ -88,7 +102,6 @@ const CPStats = () => {
                                     <AnimatedNumber value={plat.count} trigger={isInView} />
                                 </span>
                             </p>
-
                         </div>
                     </a>
                 ))}

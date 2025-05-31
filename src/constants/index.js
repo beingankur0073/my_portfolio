@@ -3,6 +3,12 @@ import project2 from "../assets/images/projects/project-2.jpg";
 import project3 from "../assets/images/projects/project-3.jpg";
 import project4 from "../assets/images/projects/project-4.jpg";
 
+import knight from "../assets/images/Knight.gif"
+import cc3 from "../assets/images/3_star.png"
+import pup from "../assets/images/pupil.webp"
+
+import sp1 from "../assets/images/special2.png"
+
 import hs from "../assets/images/education/hs.jpeg"
 import college from "../assets/images/education/college.png"
 import md from "../assets/images/education/md.jpeg"
@@ -11,13 +17,86 @@ import cc from "../assets/images/cp/cc.jpeg"
 import cf from "../assets/images/cp/cf1.png"
 import lc from "../assets/images/cp/lc.png"
 
-export const HERO_CONTENT = `A beginner-level full stack developer passionate about learning new technologies and continuously improving my skills. My expertise lies in front-end development with React.js and Next.js, as well as back-end development using Express, Node.js, and MongoDB. I'm eager to take on new challenges and contribute to innovative projects.`;
 
-export const ABOUT_TEXT = `I am currently pursuing a B.Tech (UG) course in Information Technology from IIEST, Shibpur, and I am in my 3rd year. I am actively seeking opportunities to enhance my skills and learn new technologies.
+export const HERO_CONTENT = `
+  A full stack developer passionate about learning new technologies and continuously improving my skills. 
+  My expertise lies in front-end development with 
+  <span class="font-bold text-cyan-400">React.js</span> and back-end development using 
+  <span class="font-bold text-green-500">Express</span>, 
+  <span class="font-bold text-green-600">Node.js</span>, 
+  <span class="font-bold text-emerald-500">MongoDB</span>, and 
+  <span class="font-bold text-orange-500">Flask</span>. 
+  I use <span class="font-bold text-blue-500">Material UI</span> and 
+  <span class="font-bold text-sky-400">Tailwind CSS</span> to build responsive, modern user interfaces. 
+  I have good experience in building full stack web applications and am eager to take on new challenges and contribute to innovative projects.
+`;
 
-As a passionate, self-taught web developer, I specialize in using React as the frontend framework, and Node.js, Express.js, and MongoDB for the backend. This combination allows me to create dynamic, responsive, and scalable web applications.
 
-In addition to web development, I have a strong interest in data structures and algorithms. I actively participate in numerous contests across various platforms, primarily using C++. These experiences have honed my problem-solving skills and deepened my understanding of computer science principles.`;
+export const ABOUT_TEXT = `
+<div class="space-y-6">
+
+   <section>
+    <p>
+      I am currently pursuing a <span class="font-bold">B.Tech</span> in 
+      <span class="font-bold">Information Technology</span> at 
+      <span class="font-bold">IIEST, Shibpur</span>, and am in my 
+      <span class="font-bold">4th year</span>. I’m eager to explore opportunities that allow me to enhance my skills and stay up-to-date with emerging technologies.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-2">Frontend Development</h2>
+    <p>
+      I focus on building dynamic, responsive, and scalable web applications. On the frontend, I work with 
+      <a href="https://reactjs.org" target="_blank" class="font-bold text-cyan-400">React</a> and use modern UI libraries such as 
+      <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-400">Tailwind CSS</a>, 
+      <a href="https://mui.com" target="_blank" class="font-bold text-indigo-500">Material UI</a>, and 
+      <a href="https://getbootstrap.com" target="_blank" class="font-bold text-blue-700">Bootstrap</a> to create clean and user-friendly interfaces.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-2">Backend Development</h2>
+    <p>
+      On the backend, I develop web services and APIs using 
+      <a href="https://nodejs.org" target="_blank" class="font-bold text-green-600">Node.js</a>, 
+      <a href="https://expressjs.com" target="_blank" class="font-bold text-green-500">Express.js</a>, 
+      <a href="https://flask.palletsprojects.com" target="_blank" class="font-bold text-gray-400">Flask</a>, and 
+      <a href="https://www.mongodb.com" target="_blank" class="font-bold text-emerald-500">MongoDB</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-2">Languages & Algorithms</h2>
+    <p>
+      I am familiar with multiple programming languages including 
+      <a href="https://isocpp.org" target="_blank" class="font-bold text-purple-500">C++</a> (my primary language), 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="font-bold text-yellow-500">JavaScript</a>, and 
+      <a href="https://www.python.org" target="_blank" class="font-bold text-blue-500">Python</a>. I regularly participate in coding contests, which helps me practice data structures and algorithms.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-2">Core Computer Science</h2>
+    <p>
+      I have studied the fundamentals of core computer science subjects such as Operating Systems, Computer Networks, DBMS, and Object-Oriented Programming.
+    </p>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold mb-2">Data Science & Machine Learning</h2>
+    <p>
+      Additionally, I’ve recently started exploring the field of data science and machine learning using libraries like 
+      <a href="https://numpy.org/" target="_blank" class="font-bold text-orange-400">NumPy</a>, 
+      <a href="https://pandas.pydata.org/" target="_blank" class="font-bold text-yellow-600">Pandas</a>, and others.
+    </p>
+  </section>
+
+</div>
+`;
+
+
+
 
 
 export const PROJECTS = [
@@ -78,10 +157,11 @@ export const STATS=[
   {
     title: "LeetCode",
     link:"https://leetcode.com/u/Beingankur0073/",
-    des:"",
+    des:"Knight",
     image: lc,
     rating:"1870",
-    count:"801"
+    count:"910",
+    badgeImg: knight
   },
   {
     title: "Codechef",
@@ -89,14 +169,16 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"194"
+    count:"194",
+    badgeImg: cc3
   },
   {
     title: "Codeforces",
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1248",
-      count:"339"
+    rating:"1249",
+    count:"339",
+    badgeImg: pup
   },
 ]
