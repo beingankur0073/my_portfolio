@@ -18,6 +18,10 @@ import cf from "../assets/images/cp/cf1.png"
 import lc from "../assets/images/cp/lc.png"
 
 
+import ac from "../assets/images/projects/AlgoCrack.png";
+import mv from "../assets/images/projects/Movie.png";
+
+
 export const HERO_CONTENT = `
   A full stack developer passionate about learning new technologies and continuously improving my skills. 
   My expertise lies in front-end development with 
@@ -108,18 +112,19 @@ export const PROJECTS = [
     technologies: ["ReactJS", "Bootstrap", "NodeJS", "MongoDB", "Socket.io", "Express"],
   },
   {
-    title: "White-Board Sharing app",
-    image: project2,
-    description:"A real-time whiteboard sharing application using React, Rough.js, and Socket.IO, allowing users to draw with tools like pencil, rectangle. Created a responsive UI and integrated Rough.js for hand-drawn graphics. Built a Node.js server with Express.js for room management and real-time updates, using UUID for unique room IDs. Ensured seamless synchronization of drawing actions across clients through Socket.IO, and enhanced the user experience with features like canvas clearing and tool switching.",
-    technologies: ["HTML", "CSS", "React", "Express","MongoDB","Node.js"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwind"],
-  },
+  title: "Movie Recommender App",
+  image: mv,
+  description:
+    "A movie recommendation system built using the TMDB 5000 dataset with additional movies added by my teammates. I developed most of the frontend and backend logic as part of our 6th semester group project. The application uses Bag of Words and vectorization techniques to recommend similar movies. If a movie isn't found in the dataset, it suggests results based on keywords and genres provided by the user. Frontend: React, Backend: Flask.",
+  technologies: ["HTML", "CSS", "React", "Flask", "Python"]
+},
+{
+  title: "AlgoCrack",
+  image: ac,
+  description:
+    "A LeetCode-style full stack MERN web application using the Judge0 API to evaluate code submissions. Users can practice coding problems, get instant feedback, and track submissions. The application features a clean UI and real-time result handling.",
+  technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS"]
+},
 ];
 
 export const CONTACT = {
@@ -159,8 +164,8 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"Knight",
     image: lc,
-    rating:"1870",
-    count:"910",
+    rating:"1910",
+    count:"950",
     badgeImg: knight
   },
   {
@@ -177,8 +182,8 @@ export const STATS=[
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1249",
-    count:"339",
+    rating:"1357",
+    count:"400",
     badgeImg: pup
   },
 ]
