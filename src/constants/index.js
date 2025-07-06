@@ -108,24 +108,35 @@ export const PROJECTS = [
     title: "Real-Time Chat Application",
     image: project1,
     description:
-      "A full-stack real-time chat application using React, Redux Toolkit, Node.js, Express.js, and MongoDB, with Socket.io for instant messaging. Implemented secure authentication using JWT, real-time notifications, and media uploads via Cloudinary. Designed an optimized database schema for efficient message retrieval with pagination. Integrated friend requests, group chats, and read receipts. Built a feature-rich admin dashboard to manage users, monitor conversations",
+      "A full-stack real-time chat application using React, Redux Toolkit, Node.js, Express.js, and MongoDB, with Socket.io for instant messaging. Implemented secure authentication using JWT, real-time notifications, and media uploads via Cloudinary. Designed an optimized database schema for efficient message retrieval with pagination. Integrated friend requests, group chats, and read receipts. Built a feature-rich admin dashboard to manage users and monitor conversations.",
     technologies: ["ReactJS", "Bootstrap", "NodeJS", "MongoDB", "Socket.io", "Express"],
+    github: [
+      { label: "GitHub Repo", url: "https://github.com/beingankur0073/chat-app" }
+    ],
   },
   {
-  title: "Movie Recommender App",
-  image: mv,
-  description:
-    "A movie recommendation system built using the TMDB 5000 dataset with additional movies added by my teammates. I developed most of the frontend and backend logic as part of our 6th semester group project. The application uses Bag of Words and vectorization techniques to recommend similar movies. If a movie isn't found in the dataset, it suggests results based on keywords and genres provided by the user. Frontend: React, Backend: Flask.",
-  technologies: ["HTML", "CSS", "React", "Flask", "Python"]
-},
-{
-  title: "AlgoCrack",
-  image: ac,
-  description:
-    "A LeetCode-style full stack MERN web application using the Judge0 API to evaluate code submissions. Users can practice coding problems, get instant feedback, and track submissions. The application features a clean UI and real-time result handling.",
-  technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS"]
-},
+    title: "Movie Recommender App",
+    image: mv,
+    description:
+      "A movie recommendation system built using the TMDB 5000 dataset with additional movies added by my teammates. I developed most of the frontend and backend logic as part of our 6th semester group project. The application uses Bag of Words and vectorization techniques to recommend similar movies. If a movie isn't found in the dataset, it suggests results based on keywords and genres provided by the user. Frontend: React with Material UI, Backend: Flask.",
+    technologies: ["HTML", "CSS", "React", "Material UI", "Flask", "Python"],
+    github: [
+      { label: "GitHub Repo", url: "https://github.com/beingankur0073/Movie_Recommender" }
+    ],
+  },
+  {
+    title: "AlgoCrack",
+    image: ac,
+    description:
+      "A LeetCode-style full stack MERN web application using the Judge0 API to evaluate code submissions. Users can practice coding problems, get instant feedback, and track submissions. The application features a clean UI and real-time result handling.",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS"],
+    github: [
+      { label: "Frontend", url: "https://github.com/beingankur0073/AlgoCrack-Frontend" },
+      { label: "Backend", url: "https://github.com/beingankur0073/AlgoCrack-Backend" }
+    ],
+  },
 ];
+
 
 export const CONTACT = {
   email: "mukherjeeankur0073@gmail.com",
@@ -164,8 +175,8 @@ export const STATS=[
     link:"https://leetcode.com/u/Beingankur0073/",
     des:"Knight",
     image: lc,
-    rating:"1910",
-    count:"950",
+    rating:"1920",
+    count:"1000",
     badgeImg: knight
   },
   {
@@ -174,7 +185,7 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"194",
+    count:"200",
     badgeImg: cc3
   },
   {
@@ -182,8 +193,8 @@ export const STATS=[
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1357",
-    count:"400",
+    rating:"1361",
+    count:"410",
     badgeImg: pup
   },
 ]

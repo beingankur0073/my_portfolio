@@ -13,6 +13,7 @@ const Navbar=()=>{
 
         <div className="flex flex-shrink-0 items-center">
             <img className="mx-2 w-12" src={logo} alt="logo" />
+            
         </div>
 
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
@@ -31,6 +32,8 @@ const Navbar=()=>{
             <a href="https://x.com/literally_ankur">
             <FaSquareXTwitter className="hover:text-neutral-500"/>
             </a>
+
+           
         </div>
     </nav>
 }
