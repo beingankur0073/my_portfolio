@@ -20,6 +20,7 @@ import lc from "../assets/images/cp/lc.png"
 
 import ac from "../assets/images/projects/AlgoCrack.png";
 import mv from "../assets/images/projects/Movie.png";
+import ch from "../assets/images/projects/Chat.png";
 
 
 export const HERO_CONTENT = `
@@ -106,9 +107,16 @@ export const ABOUT_TEXT = `
 export const PROJECTS = [
   {
     title: "Real-Time Chat Application",
-    image: project1,
-    description:
-      "A full-stack real-time chat application using React, Redux Toolkit, Node.js, Express.js, and MongoDB, with Socket.io for instant messaging. Implemented secure authentication using JWT, real-time notifications, and media uploads via Cloudinary. Designed an optimized database schema for efficient message retrieval with pagination. Integrated friend requests, group chats, and read receipts. Built a feature-rich admin dashboard to manage users and monitor conversations.",
+    image: ch,
+    description: `
+      A full-stack <strong>real-time chat application</strong> using 
+      <strong>React</strong>, <strong>Redux Toolkit</strong>, <strong>Node.js</strong>, 
+      <strong>Express.js</strong>, and <strong>MongoDB</strong>, with 
+      <strong>Socket.io</strong> for instant messaging. 
+      Implemented <strong>JWT authentication</strong>, real-time notifications, 
+      <strong>Cloudinary media uploads</strong>, friend requests, group chats, and read receipts. 
+      Includes a <strong>feature-rich admin dashboard</strong> to manage users and monitor conversations.
+    `,
     technologies: ["ReactJS", "Bootstrap", "NodeJS", "MongoDB", "Socket.io", "Express"],
     github: [
       { label: "GitHub Repo", url: "https://github.com/beingankur0073/chat-app" }
@@ -117,8 +125,14 @@ export const PROJECTS = [
   {
     title: "Movie Recommender App",
     image: mv,
-    description:
-      "A movie recommendation system built using the TMDB 5000 dataset with additional movies added by my teammates. I developed most of the frontend and backend logic as part of our 6th semester group project. The application uses Bag of Words and vectorization techniques to recommend similar movies. If a movie isn't found in the dataset, it suggests results based on keywords and genres provided by the user. Frontend: React with Material UI, Backend: Flask.",
+    description: `
+      A <strong>movie recommendation system</strong> built using the 
+      <strong>TMDB 5000 dataset</strong>. 
+      Developed using <strong>React</strong>, <strong>Material UI</strong> for frontend and 
+      <strong>Flask</strong> on the backend. 
+      Uses <strong>Bag of Words</strong> and <strong>vectorization</strong> to recommend similar movies. 
+      Also includes fallback recommendations using <strong>keywords</strong> and <strong>genres</strong>.
+    `,
     technologies: ["HTML", "CSS", "React", "Material UI", "Flask", "Python"],
     github: [
       { label: "GitHub Repo", url: "https://github.com/beingankur0073/Movie_Recommender" }
@@ -127,15 +141,23 @@ export const PROJECTS = [
   {
     title: "AlgoCrack",
     image: ac,
-    description:
-      "A LeetCode-style full stack MERN web application using the Judge0 API to evaluate code submissions. Users can practice coding problems, get instant feedback, and track submissions. The application features a clean UI and real-time result handling.",
+    description: `
+      A <strong>LeetCode-style</strong> full stack <strong>MERN</strong> web app using the 
+      <strong>Judge0 API</strong> to evaluate code. 
+      Built with <strong>React</strong>, <strong>Express</strong>, <strong>Node</strong>, 
+      <strong>MongoDB</strong>, and <strong>Tailwind CSS</strong>. 
+      Includes <strong>real-time result handling</strong>, <strong>instant feedback</strong>, and 
+      <strong>submission tracking</strong>.
+    `,
     technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS"],
     github: [
       { label: "Frontend", url: "https://github.com/beingankur0073/AlgoCrack-Frontend" },
-      { label: "Backend", url: "https://github.com/beingankur0073/AlgoCrack-Backend" }
+      { label: "Backend", url: "https://github.com/beingankur0073/AlgoCrack-Backend" },
     ],
+    live: "https://algo-crack-frontend.vercel.app/login"
   },
 ];
+
 
 
 export const CONTACT = {
@@ -185,7 +207,7 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"200",
+    count:"250",
     badgeImg: cc3
   },
   {
@@ -193,8 +215,8 @@ export const STATS=[
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1361",
-    count:"410",
+    rating:"1365",
+    count:"420",
     badgeImg: pup
   },
 ]

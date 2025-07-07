@@ -59,8 +59,9 @@ const CPStats = () => {
                     <a
                         href={plat.link}
                         key={index}
-                        className="w-60 h-70 flex flex-col items-center bg-neutral-900 pt-3 rounded-2xl hover:bg-violet-600 transition-all duration-300"
-                    >
+                       className="w-60 h-70 flex flex-col items-center bg-neutral-900 pt-3 rounded-2xl transition-all duration-300 hover:bg-gradient-to-r hover:from-blue-800 hover:to-blue-600"
+                       >
+
                         <img
                             width={100}
                             height={100}

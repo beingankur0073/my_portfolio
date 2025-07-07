@@ -48,7 +48,7 @@ const Hero=()=>{
                         variants={container(1.2)}
                         initial="hidden"
                         animate="visible"
-                        className="mt-4 inline-block rounded border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-neutral-800"
+                        className="mt-4 inline-block rounded border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 bg-blue-500"
                     >
                     Resume
                     </motion.a>
