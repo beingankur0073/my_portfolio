@@ -198,7 +198,7 @@ export const STATS=[
     des:"Knight",
     image: lc,
     rating:"1920",
-    count:"1000",
+    count:"1010",
     badgeImg: knight
   },
   {
@@ -207,7 +207,7 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"250",
+    count:"256",
     badgeImg: cc3
   },
   {
@@ -215,7 +215,7 @@ export const STATS=[
     link:"https://codeforces.com/profile/mukherjeeankur0073",
     des:"Pupil",
     image: cf,
-    rating:"1365",
+    rating:"1372",
     count:"420",
     badgeImg: pup
   },
