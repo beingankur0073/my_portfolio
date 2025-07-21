@@ -5,6 +5,8 @@ import { SiMongodb, SiJavascript, SiPython, SiTailwindcss, SiExpress, SiMysql, S
 import matUi from '../assets/Modified.png';
 import { motion } from 'framer-motion';
 import AnimatedHeading from './utils/AnimateHeading.jsx';
+import numpy from '../assets/Numpy.svg';
+import pandas from '../assets/Pandas.png';
 
 const iconVaraints = (duration) => ({
   initial: { y: -10 },
@@ -108,9 +110,27 @@ const Technologies = () => {
     <motion.div variants={iconVaraints(4.1)} initial="initial" animate="animate" className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl ring-2 ring-blue-400 shadow-blue-400/40 shadow-lg">
       <SiCloudinary className="text-7xl text-blue-400" />
     </motion.div>
+            <motion.div
+        variants={iconVaraints(3.7)}
+        initial="initial"
+        animate="animate"
+        className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl ring-2 ring-yellow-300 shadow-yellow-300/40 shadow-lg"
+      >
+        <img src={numpy} alt="NumPy" className="w-16 h-16 object-contain" />
+      </motion.div>
+
+      <motion.div
+        variants={iconVaraints(3.9)}
+        initial="initial"
+        animate="animate"
+        className="flex h-[90px] w-[90px] items-center justify-center rounded-2xl ring-2 ring-pink-400 shadow-pink-400/40 shadow-lg"
+      >
+        <img src={pandas} alt="Pandas" className="w-16 h-16 object-contain" />
+      </motion.div>
+          
 
       </motion.div>
-     
+
     </div>
   );
 };
