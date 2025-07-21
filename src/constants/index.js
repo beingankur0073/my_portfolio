@@ -11,7 +11,7 @@ import sp1 from "../assets/images/special2.png"
 
 import hs from "../assets/images/education/hs.jpeg"
 import college from "../assets/images/education/college.png"
-import md from "../assets/images/education/md.jpeg"
+import ns from "../assets/images/education/National.png"
 
 import cc from "../assets/images/cp/cc.jpeg"
 import cf from "../assets/images/cp/cf1.png"
@@ -170,7 +170,7 @@ export const CONTACT = {
 export const EDUCATION = [
   {
     title: "Secondary",
-    image: md,
+    image: ns,
     description:
       "2019|National Model High School",
     address:"Michaelnagar,Dumdum Kolkata-700133"

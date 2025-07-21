@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const words = ["Technologies", "Skills","Languages"];
+const words = ["Technologies", "Skills","Languages","Tools"];
 const typingSpeed = 120;    // ms per letter
 const holdingDelay = 800;   // ms to hold full word
 
