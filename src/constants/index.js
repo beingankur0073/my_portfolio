@@ -49,16 +49,18 @@ export const ABOUT_TEXT = `
     </p>
   </section>
 
-  <section>
-    <h2 class="text-xl font-semibold mb-2">Frontend Development</h2>
-    <p>
-      I focus on building dynamic, responsive, and scalable web applications. On the frontend, I work with 
-      <a href="https://reactjs.org" target="_blank" class="font-bold text-cyan-400">React</a> and use modern UI libraries such as 
-      <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-400">Tailwind CSS</a>, 
-      <a href="https://mui.com" target="_blank" class="font-bold text-indigo-500">Material UI</a>, and 
-      <a href="https://getbootstrap.com" target="_blank" class="font-bold text-blue-700">Bootstrap</a> to create clean and user-friendly interfaces.
-    </p>
-  </section>
+ <section>
+  <h2 class="text-xl font-semibold mb-2">Frontend Development</h2>
+  <p>
+    I focus on building dynamic, responsive, and scalable web applications. On the frontend, I work with 
+    <a href="https://reactjs.org" target="_blank" class="font-bold text-cyan-400">React</a> and manage application state using 
+    <a href="https://redux.js.org" target="_blank" class="font-bold text-purple-500">Redux</a> and React's 
+    <span class="font-semibold text-neutral-300">Context API (useContext)</span>. I also use modern UI libraries such as 
+    <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-400">Tailwind CSS</a>, 
+    <a href="https://mui.com" target="_blank" class="font-bold text-indigo-500">Material UI</a>, and 
+    <a href="https://getbootstrap.com" target="_blank" class="font-bold text-blue-700">Bootstrap</a> to create clean and user-friendly interfaces.
+  </p>
+</section>
 
   <section>
     <h2 class="text-xl font-semibold mb-2">Backend Development</h2>
@@ -117,7 +119,7 @@ export const PROJECTS = [
       <strong>Cloudinary media uploads</strong>, friend requests, group chats, and read receipts. 
       Includes a <strong>feature-rich admin dashboard</strong> to manage users and monitor conversations.
     `,
-    technologies: ["ReactJS", "Bootstrap", "NodeJS", "MongoDB", "Socket.io", "Express"],
+    technologies: ["ReactJS", "Material UI", "NodeJS", "MongoDB", "Socket.io", "Express","Redux Toolkit", "Cloudinary", "JWT"],
     github: [
       { label: "GitHub Repo", url: "https://github.com/beingankur0073/chat-app" }
     ],
@@ -133,7 +135,7 @@ export const PROJECTS = [
       Uses <strong>Bag of Words</strong> and <strong>vectorization</strong> to recommend similar movies. 
       Also includes fallback recommendations using <strong>keywords</strong> and <strong>genres</strong>.
     `,
-    technologies: ["HTML", "CSS", "React", "Material UI", "Flask", "Python"],
+    technologies: [ "React", "Material UI", "Flask", "Python"],
     github: [
       { label: "GitHub Repo", url: "https://github.com/beingankur0073/Movie_Recommender" }
     ],
@@ -149,12 +151,12 @@ export const PROJECTS = [
       Includes <strong>real-time result handling</strong>, <strong>instant feedback</strong>, and 
       <strong>submission tracking</strong>.
     `,
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS"],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS","Zod","Cloudinary","JWT"],
     github: [
       { label: "Frontend", url: "https://github.com/beingankur0073/AlgoCrack-Frontend" },
       { label: "Backend", url: "https://github.com/beingankur0073/AlgoCrack-Backend" },
     ],
-    live: "https://algo-crack-frontend.vercel.app/login"
+    live: "https://algo-crack-frontend.vercel.app/auth"
   },
 ];
 
