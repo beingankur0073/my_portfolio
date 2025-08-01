@@ -21,6 +21,7 @@ import lc from "../assets/images/cp/lc.png"
 import ac from "../assets/images/projects/AlgoCrack.png";
 import mv from "../assets/images/projects/Movie.png";
 import ch from "../assets/images/projects/Chat.png";
+import nf from "../assets/images/projects/Nf.png";
 
 
 export const HERO_CONTENT = `
@@ -158,6 +159,23 @@ export const PROJECTS = [
     ],
     live: "https://algo-crack-frontend.vercel.app/auth"
   },
+  {
+  title: "Gen-Ai Movie Reccommeder",
+  image: nf, // Replace 'mf' with the actual imported image reference
+  description: `
+    A <strong>movie discovery</strong> web app built with <strong>React</strong> and 
+    <strong>Redux</strong>, powered by <strong>Firebase</strong> for backend services and 
+    authentication. Utilizes the <strong>TMDB API</strong> to fetch rich movie data and 
+    integrates <strong>Perplexity AI</strong> for intelligent movie recommendations. 
+    Features include <strong>real-time search</strong>, <strong>watchlist management</strong>, and 
+    <strong>AI-powered suggestions</strong>.
+  `,
+  technologies: ["React", "Redux", "Firebase", "TMDB API", "Perplexity AI", "Tailwind CSS"],
+  github: [
+    { label: "GitHub Repo", url: "https://github.com/beingankur0073/netflix-gpt" }
+  ],
+  live: "https://moviefinder-2ecb2.web.app" 
+}
 ];
 
 
@@ -200,7 +218,7 @@ export const STATS=[
     des:"Knight",
     image: lc,
     rating:"1920",
-    count:"1010",
+    count:"1020",
     badgeImg: knight
   },
   {
@@ -209,7 +227,7 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"256",
+    count:"260",
     badgeImg: cc3
   },
   {
@@ -218,7 +236,7 @@ export const STATS=[
     des:"Pupil",
     image: cf,
     rating:"1372",
-    count:"420",
+    count:"430",
     badgeImg: pup
   },
 ]
