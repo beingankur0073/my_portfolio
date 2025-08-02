@@ -142,25 +142,33 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "AlgoCrack",
-    image: ac,
-    description: `
-      A <strong>LeetCode-style</strong> full stack <strong>MERN</strong> web app using the 
-      <strong>Judge0 API</strong> to evaluate code. 
-      Built with <strong>React</strong>, <strong>Express</strong>, <strong>Node</strong>, 
-      <strong>MongoDB</strong>, and <strong>Tailwind CSS</strong>. 
-      Includes <strong>real-time result handling</strong>, <strong>instant feedback</strong>, and 
-      <strong>submission tracking</strong>.
-    `,
-    technologies: ["MongoDB", "Express.js", "React", "Node.js", "Judge0 API", "Tailwind CSS","Zod","Cloudinary","JWT"],
-    github: [
-      { label: "Frontend", url: "https://github.com/beingankur0073/AlgoCrack-Frontend" },
-      { label: "Backend", url: "https://github.com/beingankur0073/AlgoCrack-Backend" },
-    ],
-    live: "https://algo-crack-frontend.vercel.app/auth"
-  },
+  "title": "AlgoCrack",
+  "image": ac,
+  "description": "<strong>LeetCode-style</strong> full-stack coding platform built with the <strong>MERN stack</strong> and <strong>Judge0 API</strong> for real-time code execution and instant feedback. Features include user profiles, submission tracking, role-based access controls, and an admin dashboard for problem management and analytics, all wrapped in a modern, responsive UI with smooth animations.",
+  "technologies": [
+    "MongoDB",
+    "Express.js",
+    "React",
+    "Node.js",
+    "Judge0 API",
+    "Tailwind CSS",
+    "Zod",
+    "Cloudinary",
+    "JWT",
+    "Redux",
+    "Framer Motion",
+    "React Query",
+    "PrismJS",
+    "Monaco Editor"
+  ],
+  "github": [
+    { "label": "Frontend", "url": "https://github.com/beingankur0073/AlgoCrack-Frontend" },
+    { "label": "Backend", "url": "https://github.com/beingankur0073/AlgoCrack-Backend" }
+  ],
+  "live": "https://algo-crack-frontend.vercel.app/auth"
+},
   {
-  title: "Gen-Ai Movie Reccommeder",
+  title: "Netflix-like GenAI Movie Platform",
   image: nf, // Replace 'mf' with the actual imported image reference
   description: `
     A <strong>movie discovery</strong> web app built with <strong>React</strong> and 

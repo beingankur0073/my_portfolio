@@ -42,13 +42,13 @@ const Hero=()=>{
 
                   
                     <motion.a
-                        href="https://drive.google.com/file/d/1ffSX5oUtBvWw6btckAv3hUmClJZi1AXQ/view"
+                        href="https://drive.google.com/file/d/1ffSX5oUtBvWw6btckAv3hUmClJZi1AXQ/view?"
                         target="_blank"
                         rel="noopener noreferrer"
                         variants={container(1.2)}
                         initial="hidden"
                         animate="visible"
-                        className="mt-4 inline-block rounded border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 bg-blue-500"
+                        className="mt-4 inline-block rounded-xl border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 bg-blue-500"
                     >
                     Resume
                     </motion.a>

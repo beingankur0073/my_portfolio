@@ -243,9 +243,9 @@ const mynologies = () => {
   animate="animate"
   data-tooltip-id="my-tooltip"
   data-tooltip-content="Vercel"
-  className="flex h-[70px] w-[70px] md:h-[80px] md:w-[80px] items-center justify-center rounded-2xl ring-2 ring-black shadow-black/40 shadow-lg"
+  className="flex h-[70px] w-[70px] md:h-[80px] md:w-[80px] items-center justify-center rounded-2xl ring-2 ring-white shadow-white/40 shadow-lg"
 >
-  <SiVercel className="text-4xl md:text-6xl text-black" />
+  <SiVercel className="text-4xl md:text-6xl text-white" />
 </motion.div>
 
 <motion.div
