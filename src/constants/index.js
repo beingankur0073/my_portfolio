@@ -18,6 +18,8 @@ import cf from "../assets/images/cp/cf1.png"
 import lc from "../assets/images/cp/lc.png"
 
 
+
+// Projects
 import ac from "../assets/images/projects/AlgoCrack.png";
 import mv from "../assets/images/projects/Movie.png";
 import ch from "../assets/images/projects/Chat.png";
@@ -168,7 +170,7 @@ export const PROJECTS = [
   "live": "https://algo-crack-frontend.vercel.app/auth"
 },
   {
-  title: "Netflix-like GenAI Movie Platform",
+  title: "Finder- GenAI Movie Platform",
   image: nf, // Replace 'mf' with the actual imported image reference
   description: `
     A <strong>movie discovery</strong> web app built with <strong>React</strong> and 
@@ -182,7 +184,7 @@ export const PROJECTS = [
   github: [
     { label: "GitHub Repo", url: "https://github.com/beingankur0073/netflix-gpt" }
   ],
-  live: "https://moviefinder-2ecb2.web.app" 
+  live: "https://finder-c4645.web.app"
 }
 ];
 
@@ -226,7 +228,7 @@ export const STATS=[
     des:"Knight",
     image: lc,
     rating:"1920",
-    count:"1020",
+    count:"1040",
     badgeImg: knight
   },
   {
@@ -235,7 +237,7 @@ export const STATS=[
     des:"3 star",
     image: cc,
     rating:"1670",
-    count:"260",
+    count:"270",
     badgeImg: cc3
   },
   {
@@ -244,7 +246,9 @@ export const STATS=[
     des:"Pupil",
     image: cf,
     rating:"1372",
-    count:"430",
+    count:"450",
     badgeImg: pup
   },
 ]
+
+export const RESUME_LINK="https://drive.google.com/file/d/1ffSX5oUtBvWw6btckAv3hUmClJZi1AXQ/view";

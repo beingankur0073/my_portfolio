@@ -1,4 +1,4 @@
-import {HERO_CONTENT} from '../constants/index.js'
+import {HERO_CONTENT, RESUME_LINK} from '../constants/index.js'
 import profilePic from "../assets/images/pfpic_2.jpg"
 import { motion } from "framer-motion"
 
@@ -42,7 +42,7 @@ const Hero=()=>{
 
                   
                     <motion.a
-                        href="https://drive.google.com/file/d/1ffSX5oUtBvWw6btckAv3hUmClJZi1AXQ/view?"
+                        href={RESUME_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
                         variants={container(1.2)}
