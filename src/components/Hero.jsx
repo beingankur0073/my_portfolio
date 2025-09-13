@@ -1,6 +1,7 @@
-import {HERO_CONTENT, RESUME_LINK} from '../constants/index.js'
+import {HERO_CONTENT, RESUME_LINK} from '../constants/index.jsx'
 import profilePic from "../assets/images/pfpic_2.jpg"
 import { motion } from "framer-motion"
+import AnimatedHeading from "./utils/AnimateHeading.jsx";
 
 const container=(delay)=>({
     hidden:{x:-100,opacity:0},
@@ -24,13 +25,20 @@ const Hero=()=>{
                     className="pb-16 text-6xl font-thin tracking-tigh lg:mt-26 lg:text-8xl">
                         Ankur Mukherjee</motion.h1>
 
-                    <motion.span
-                         variants={container(0.5)}
-                         initial="hidden"
-                         animate="visible"
-                     className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
-                        Full Stack Developer
-                    </motion.span >
+                    <motion.div
+                    variants={container(0.5)}
+                    initial="hidden"
+                    animate="visible"
+                    className="text-center"
+                    >
+                    <AnimatedHeading
+                        words={["Competitive Programming Enthusiast", "Machine Learning Enthusiast", "Tech Lover"]}
+                        typingSpeed={100}        // speed per letter
+                        holdingDelay={1000}      // pause at full word
+                        className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
+                        style={{ display: "inline-block" }} // keeps it inline for the gradient
+                    />
+                    </motion.div>
 
                     <motion.p 
                          variants={container(1)}

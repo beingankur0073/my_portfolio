@@ -1,4 +1,4 @@
-import { EDUCATION } from "../constants";
+import { EDUCATION } from "../constants/index.jsx";
 import { motion } from "framer-motion";
 
 const Education = () => {

@@ -1,6 +1,6 @@
-import { PROJECTS } from "../constants";
+import { PROJECTS } from "../constants/index.jsx";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,13 +14,7 @@ const Projects = () => {
     setCurrentIndex((prev) => (prev - 1 + PROJECTS.length) % PROJECTS.length);
   };
 
-  // Auto-slide every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+  // The useEffect hook for auto-sliding has been removed.
 
   return (
     <div className="border-b border-neutral-900 pb-4">
