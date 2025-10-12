@@ -18,7 +18,6 @@
   z-index: 50;
 }
 
-
 @keyframes animated-gradient {
   0%, 100% {
     filter: brightness(1);
@@ -29,7 +28,12 @@
 }
 
 .animate-gradient-bg {
-  background: radial-gradient(circle 500px at 50% 200px, #233554, transparent);
+  background: radial-gradient(circle 500px at 50% 200px, #062355, transparent);
   animation: animated-gradient 3s ease-in-out infinite alternate;
 }
+
+
+
+
+
 

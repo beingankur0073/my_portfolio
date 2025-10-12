@@ -5,7 +5,6 @@ import { useState } from "react";
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Handle Next and Prev
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % PROJECTS.length);
   };
@@ -13,8 +12,6 @@ const Projects = () => {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + PROJECTS.length) % PROJECTS.length);
   };
-
-  // The useEffect hook for auto-sliding has been removed.
 
   return (
     <div className="border-b border-neutral-900 pb-4">
@@ -35,7 +32,9 @@ const Projects = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="rounded-xl border border-neutral-800 bg-neutral-900/30 shadow-xl backdrop-blur-md p-6"
+            // Changed: Using rgba for a dark blue-black with transparency
+            className="rounded-xl border border-neutral-800 shadow-xl backdrop-blur-md p-6"
+            style={{ backgroundColor: 'rgba(2, 6, 23, 0.5)' }} // Example: Very dark blue with 50% opacity
           >
             <div className="flex flex-wrap justify-center">
               <motion.div

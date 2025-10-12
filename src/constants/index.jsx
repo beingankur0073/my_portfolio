@@ -1,7 +1,7 @@
 
 import knight from "../assets/images/Knight.gif"
 import cc3 from "../assets/images/3_star.png"
-import pup from "../assets/images/pupil.webp"
+import pup from "../assets/images/spl.png"
 
 
 
@@ -300,7 +300,7 @@ export const STATS = [
     des: "Knight",
     image: lc,
     rating: "1920",
-    count: "1040",
+    count: "1110",
     badgeImg: knight,
     colors: ['#F89F1B', '#000000'] // Vibrant orange to black gradient
   },
@@ -309,18 +309,18 @@ export const STATS = [
     link: "https://www.codechef.com/users/beingankur",
     des: "3 star",
     image: cc,
-    rating: "1670",
-    count: "270",
+    rating: "1675",
+    count: "290",
     badgeImg: cc3,
     colors: ['#5B4638', '#A07F69'] // Dark brown to lighter, warm brown
   },
   {
     title: "Codeforces",
     link: "https://codeforces.com/profile/mukherjeeankur0073",
-    des: "Pupil",
+    des: "Specialist",
     image: cf,
-    rating: "1372",
-    count: "450",
+    rating: "1452",
+    count: "500",
     badgeImg: pup,
     colors: ['#445F9D', '#7B1F8C', '#EC1C24'] // Blue to purple to red, reflecting their branding and rating colors
   },
