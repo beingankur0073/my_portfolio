@@ -32,7 +32,7 @@ const Hero=()=>{
                     className="text-center"
                     >
                     <AnimatedHeading
-                        words={["Competitive Programming Enthusiast", "Machine Learning Enthusiast", "Tech Lover"]}
+                        words={["Competitive Programmar", "Data Science Enthusiast", "Tech Lover","Full Stack Developer"]}
                         typingSpeed={100}        // speed per letter
                         holdingDelay={1000}      // pause at full word
                         className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent"
@@ -56,7 +56,7 @@ const Hero=()=>{
                         variants={container(1.2)}
                         initial="hidden"
                         animate="visible"
-                        className="mt-4 inline-block rounded-xl border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 bg-blue-500"
+                        className="inline-block rounded-xl border border-neutral-700 px-6 py-2 text-sm font-semibold text-white transition hover:bg-blue-800 bg-blue-500"
                     >
                     Resume
                     </motion.a>

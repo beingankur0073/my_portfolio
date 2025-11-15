@@ -7,6 +7,10 @@
 :root{
   font-family: "Inter",sans-serif;
 }
+.rd3t-link {
+  stroke: #ffffff !important;
+  stroke-width: 2px !important;
+}
 
 .custom-tooltip {
   background-color: #1f2937;  /* bg-gray-800 */

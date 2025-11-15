@@ -219,7 +219,7 @@ export const PROJECTS = [
       { "label": "Frontend", "url": "https://github.com/beingankur0073/AlgoCrack-Frontend" },
       { "label": "Backend", "url": "https://github.com/beingankur0073/AlgoCrack-Backend" }
     ],
-    "live": "https://algo-crack-frontend.vercel.app/auth"
+    "live": "https://algo-crack-frontend.vercel.app"
   },
   {
     title: "Finder- GenAI Movie Platform",
@@ -299,8 +299,8 @@ export const STATS = [
     link: "https://leetcode.com/u/Beingankur0073/",
     des: "Knight",
     image: lc,
-    rating: "1920",
-    count: "1110",
+    rating: "2009",
+    count: "1150",
     badgeImg: knight,
     colors: ['#F89F1B', '#000000'] // Vibrant orange to black gradient
   },
@@ -440,5 +440,99 @@ export const techPairs = [
     duration: 2.5,
     front: <SiVercel data-tooltip-id="my-tooltip" data-tooltip-content="Vercel" className="text-4xl md:text-6xl text-white" />,
     back: <SiRender data-tooltip-id="my-tooltip" data-tooltip-content="Render" className="text-4xl md:text-6xl text-sky-600" />,
+  },
+];
+
+
+export const treeData = [
+  {
+    name: "Skills",
+    attributes: {
+      color: "#c084fc",
+      bgColor: "rgba(192,132,252,0.15)",
+      icon: <RiReactjsLine />,
+    },
+
+    children: [
+      // ---------- FRONTEND ----------
+      {
+        name: "Frontend Development",
+        attributes: {
+          color: "#38bdf8",
+          bgColor: "rgba(56,189,248,0.15)",
+          icon: <RiReactjsLine />,
+        },
+        children: [
+          { name: "React", attributes: { icon: <RiReactjsLine />, color: "#61dafb", bgColor: "rgba(97,218,251,0.15)" }},
+          { name: "Redux", attributes: { icon: <SiRedux />, color: "#818cf8", bgColor: "rgba(129,140,248,0.15)" }},
+          { name: "Tailwind CSS", attributes: { icon: <SiTailwindcss />, color: "#0ea5e9", bgColor: "rgba(14,165,233,0.15)" }},
+          { name: "Material UI", attributes: { icon: matUi, color: "#0284c7", bgColor: "rgba(2,132,199,0.15)" }},
+          
+        ],
+      },
+
+      // ---------- BACKEND ----------
+      {
+        name: "Backend Development",
+        attributes: {
+          color: "#4ade80",
+          bgColor: "rgba(74,222,128,0.15)",
+          icon: <FaNodeJs />,
+        },
+        children: [
+          { name: "Node.js", attributes: { icon: <FaNodeJs />, color: "#22c55e", bgColor: "rgba(34,197,94,0.15)" }},
+          { name: "Express.js", attributes: { icon: <SiExpress />, color: "#ffffff", bgColor: "rgba(255,255,255,0.10)" }},
+          { name: "Flask", attributes: { icon: <SiFlask />, color: "#ffffff", bgColor: "rgba(255,255,255,0.10)" }},
+          { name: "MongoDB", attributes: { icon: <SiMongodb />, color: "#4ade80", bgColor: "rgba(74,222,128,0.15)" }},
+        ],
+      },
+
+      // ---------- LANGUAGES & ALGORITHMS ----------
+      {
+        name: "DSA",
+        attributes: {
+          color: "#facc15",
+          bgColor: "rgba(250,204,21,0.15)",
+          icon: <TbBrandCpp />,
+        },
+        children: [
+          { name: "C++", attributes: { icon: <TbBrandCpp />, color: "#a855f7", bgColor: "rgba(168,85,247,0.15)" }},
+          { name: "JavaScript", attributes: { icon: <SiJavascript />, color: "#fde047", bgColor: "rgba(253,224,71,0.15)" }},
+          { name: "Python", attributes: { icon: <SiPython />, color: "#3b82f6", bgColor: "rgba(59,130,246,0.15)" }},
+           
+        ],
+      },
+
+      // ---------- CORE CS ----------
+      {
+        name: "Core CS",
+        attributes: {
+          color: "#fb7185",
+          bgColor: "rgba(251,113,133,0.15)",
+          icon: <SiHtml5 />,
+        },
+        children: [
+          { name: "Operating Systems", attributes: { icon: <SiHtml5 />, color: "#ef4444", bgColor: "rgba(239,68,68,0.15)" }},
+          { name: "DBMS", attributes: { icon: <SiMysql />, color: "#3b82f6", bgColor: "rgba(59,130,246,0.15)" }},
+          { name: "Computer Networks", attributes: { icon: <SiCss3 />, color: "#38bdf8", bgColor: "rgba(56,189,248,0.15)" }},
+          { name: "OOP", attributes: { icon: <TbBrandCpp />, color: "#a855f7", bgColor: "rgba(168,85,247,0.15)" }},
+        ],
+      },
+
+      // ---------- DATA SCIENCE ----------
+      {
+        name: "Data Science",
+        attributes: {
+          color: "#f472b6",
+          bgColor: "rgba(244,114,182,0.15)",
+          icon: numpy,
+        },
+        children: [
+          { name: "NumPy", attributes: { icon: numpy, color: "#0ea5e9", bgColor: "rgba(14,165,233,0.15)" }},
+          { name: "Pandas", attributes: { icon: pandas, color: "#ec4899", bgColor: "rgba(236,72,153,0.15)" }},
+        
+        ],
+      },
+    ],
   },
 ];
