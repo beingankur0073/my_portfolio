@@ -3,13 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ABOUT_DATA } from "../constants/index.jsx";
 
-const GRADIENTS = [
-  "from-[#0ea5e9] to-[#312e81]",
-  "from-[#4ade80] to-[#166534]",
-  "from-[#a78bfa] to-[#4c1d95]",
-  "from-[#fb923c] to-[#7c2d12]",
-  "from-[#f472b6] to-[#831843]",
-  "from-[#38bdf8] to-[#0f172a]",
+const DARK_THEMES = [
+  { bg: "from-[#0f0f0f] to-[#1b0a0a]", accent: "#ff6666" },   // black-red
+  { bg: "from-[#0f0f0f] to-[#0f1024]", accent: "#7c8cff" },   // black-blue
+  { bg: "from-[#0f0f0f] to-[#170f24]", accent: "#d29cff" },   // black-purple
+  { bg: "from-[#0f0f0f] to-[#002a32]", accent: "#7de4ff" },   // black-cyan
+  { bg: "from-[#0f0f0f] to-[#0f2412]", accent: "#8fff9a" },   // black-green
+  { bg: "from-[#0f0f0f] to-[#24170f]", accent: "#ffb07c" },   // black-orange
 ];
 
 const About = () => {
@@ -17,159 +17,166 @@ const About = () => {
   const skillDomains = ABOUT_DATA.filter((item) => item.type === "skill");
 
   const [[page, direction], setPage] = useState([0, 0]);
+  const paginate = (dir) => setPage([page + dir, dir]);
 
-  const paginate = (newDirection) =>
-    setPage([page + newDirection, newDirection]);
-
-  const slideIndex =
+  const index =
     ((page % skillDomains.length) + skillDomains.length) %
     skillDomains.length;
 
+  const theme = DARK_THEMES[index % DARK_THEMES.length];
+
   const variants = {
-    enter: (direction) => ({
-      x: direction > 0 ? 200 : -200,
+    enter: (dir) => ({
+      x: dir > 0 ? 150 : -150,
       opacity: 0,
-      scale: 0.9,
+      scale: 0.96,
     }),
     center: {
       x: 0,
       opacity: 1,
       scale: 1,
     },
-    exit: (direction) => ({
-      x: direction < 0 ? 200 : -200,
+    exit: (dir) => ({
+      x: dir < 0 ? 150 : -150,
       opacity: 0,
-      scale: 0.9,
+      scale: 0.96,
     }),
   };
 
   return (
-    <div className="border-b border-neutral-800 pb-16">
+    <div className="border-b border-neutral-800 pb-16 font-mono">
       
       {/* Heading */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.6 }}
-        className="my-20 text-center 
-        text-3xl sm:text-4xl lg:text-5xl font-bold"
+        className="my-20 text-center text-3xl sm:text-4xl lg:text-5xl font-bold"
       >
         About <span className="text-neutral-400">Me</span>
       </motion.h2>
 
       <div className="flex flex-col items-center gap-12 px-4">
 
-        {/* Intro Paragraph */}
+        {/* Intro */}
         <motion.p
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 40 }}
           transition={{ duration: 0.8 }}
-          className="
-            text-base sm:text-lg lg:text-xl
-            leading-relaxed text-center text-neutral-300 
-            max-w-3xl
-          "
+          className="text-base sm:text-lg lg:text-xl text-neutral-300 text-center max-w-3xl"
         >
           {intro.content}
         </motion.p>
 
-        {/* Carousel Container */}
-        <div
-          className="
-            relative 
-            w-full 
-            max-w-sm sm:max-w-md lg:max-w-xl 
-            h-[380px] sm:h-[420px] lg:h-[500px]
-            overflow-hidden
-          "
+        {/* Carousel */}
+        {/* Carousel */}
+<div className="flex items-center justify-center w-full">
+
+  {/* Card wrapper becomes the relative container */}
+  <div className="relative w-full max-w-xs sm:max-w-md lg:max-w-lg
+                  h-[360px] sm:h-[420px] lg:h-[480px]">
+
+    {/* Left Button */}
+    <button
+      onClick={() => paginate(-1)}
+      className="
+        absolute left-[-22px] sm:left-[-36px] top-1/2 -translate-y-1/2
+        flex items-center justify-center
+        bg-neutral-900/80 hover:bg-neutral-800
+        text-white 
+        p-2 sm:p-3
+        rounded-full shadow-lg backdrop-blur-xl
+        z-20
+      "
+    >
+      <ChevronLeft size={20} className="sm:size-26" />
+    </button>
+
+    {/* Animated slides */}
+    <div className="absolute inset-0 overflow-hidden">
+      <AnimatePresence initial={false} custom={direction}>
+        <motion.div
+          key={page}
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{ duration: 0.45 }}
+          className="absolute w-full h-full"
         >
-          <AnimatePresence initial={false} custom={direction}>
-            <motion.div
-              key={page}
-              custom={direction}
-              variants={variants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.6 }}
-              className="absolute w-full h-full px-2"
+          {/* Card */}
+          <motion.div
+            whileHover={{ scale: 1.015 }}
+            className={`
+              w-full h-full p-6 rounded-3xl flex flex-col
+              bg-gradient-to-br ${theme.bg}
+              border border-neutral-700/60
+              shadow-[0_8px_18px_rgba(0,0,0,0.45)]
+              backdrop-blur-xl
+            `}
+          >
+            {/* Image */}
+            <img
+              src={skillDomains[index].image}
+              alt={skillDomains[index].title}
+              className="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-xl mb-4"
+            />
+
+            {/* Title */}
+            <h3
+              className="font-bold text-lg sm:text-xl lg:text-2xl mb-2"
+              style={{ color: theme.accent }}
             >
-              {/* CARD */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className={`
-                  w-full h-full 
-                  p-4 sm:p-5 lg:p-6 
-                  rounded-3xl shadow-xl border 
-                  border-neutral-800 text-white 
-                  bg-gradient-to-br ${GRADIENTS[slideIndex]}
-                `}
-              >
-                {/* Image */}
-                <img
-                  src={skillDomains[slideIndex].image}
-                  alt={skillDomains[slideIndex].title}
-                  className="
-                  w-full 
-                  h-32 sm:h-40 lg:h-48 
-                  object-cover rounded-xl mb-4 shadow-md
-                "
-                />
+              {skillDomains[index].title}
+            </h3>
 
-                {/* Title */}
-                <h3 className="font-extrabold 
-                  text-lg sm:text-xl lg:text-2xl mb-2">
-                  {skillDomains[slideIndex].title}
-                </h3>
+            {/* Description */}
+            <p className="text-neutral-300 text-xs sm:text-sm lg:text-base mb-4 leading-relaxed">
+              {skillDomains[index].description}
+            </p>
 
-                {/* Description */}
-                <p className="text-neutral-100/80 
-                  text-xs sm:text-sm lg:text-base 
-                  mb-4 leading-relaxed">
-                  {skillDomains[slideIndex].description}
-                </p>
+            {/* Technologies */}
+            <div className="flex flex-wrap gap-2 mt-auto">
+              {skillDomains[index].technologies.map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-2 py-1 text-[10px] sm:text-xs rounded-full border"
+                  style={{
+                    backgroundColor: theme.accent + "22",
+                    borderColor: theme.accent + "55",
+                    color: theme.accent,
+                  }}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
+      </AnimatePresence>
+    </div>
 
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {skillDomains[slideIndex].technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="
-                        bg-white/20 backdrop-blur-md 
-                        px-2 sm:px-3 py-1 
-                        text-[10px] sm:text-xs 
-                        rounded-full text-white 
-                        border border-white/30
-                      "
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+    {/* Right Button */}
+    <button
+      onClick={() => paginate(1)}
+      className="
+        absolute right-[-22px] sm:right-[-36px] top-1/2 -translate-y-1/2
+        flex items-center justify-center
+        bg-neutral-900/80 hover:bg-neutral-800
+        text-white 
+        p-2 sm:p-3
+        rounded-full shadow-lg backdrop-blur-xl
+        z-20
+      "
+    >
+      <ChevronRight size={20} className="sm:size-26" />
+    </button>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={() => paginate(-1)}
-            className="absolute top-1/2 left-2 -translate-y-1/2 
-              bg-black/40 hover:bg-black/60 
-              text-white p-2 rounded-full backdrop-blur-md"
-          >
-            <ChevronLeft size={22} />
-          </button>
+  </div>
+</div>
+</div>
 
-          <button
-            onClick={() => paginate(1)}
-            className="absolute top-1/2 right-2 -translate-y-1/2 
-              bg-black/40 hover:bg-black/60 
-              text-white p-2 rounded-full backdrop-blur-md"
-          >
-            <ChevronRight size={22} />
-          </button>
-        </div>
-      </div>
     </div>
   );
 };

@@ -64,54 +64,49 @@ import vscode from "../assets/vscode.png";
 
 
 export const HERO_CONTENT = `
-  Hey there 👋, I'm 
-  <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-extrabold text-3xl animate-pulse">
-    Ankur
-  </span>!  
-  I'm an engineering student passionate about 
-  <span class="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent font-bold text-2xl">
-    Full Stack Web Development
-  </span>, 
-  curious about 
-  <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent font-bold text-2xl">
-    Machine Learning
-  </span>, and skilled in 
-  <span class="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-bold text-2xl">
-    Data Structures & Algorithms
-  </span>.  
- 
-  I love exploring 
-  <span class="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent font-bold">
-    new technologies
-  </span> 
-  and gaining knowledge about 
-  <span class="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent font-bold">
-    Geopolitics
-  </span>, 
-  <span class="bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent font-bold">
-    History
-  </span>, and other fascinating domains.  
- 
-  Outside of tech, I like to play 
-  <span class="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent font-semibold">
-    Cricket
-  </span>, enjoy 
-  <span class="bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent font-semibold">
-    Drawing
-  </span>, and spend time with 
-  <span class="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent font-semibold">
-    Computer & Mobile Games
-  </span>.  
-  <br/><br/>
-  <span class="bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent font-extrabold text-3xl animate-gradient">
-    Techie by passion, learner by curiosity, artist at heart ✨
-  </span>
-  <br/><br/>
-  <span class="bg-gradient-to-r from-indigo-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent font-semibold text-base">
-     💡 Want to collaborate on a project or just have a chat? Feel free to reach out!
-  </span>
-`;
+  <div class="font-mono leading-relaxed">
 
+    Hey there 👋, I'm  
+    <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent font-bold text-3xl">
+      Ankur
+    </span>!  
+
+    <br/><br/>
+
+    I'm passionate about  
+    <span class="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent font-semibold">
+      Full Stack Web Development
+    </span>,  
+    exploring  
+    <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent font-semibold">
+      Data Science & Machine Learning
+    </span>,  
+    and constantly improving my  
+    <span class="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent font-semibold">
+      DSA skills
+    </span>.  
+
+   
+
+    Outside tech, I enjoy  
+    <span class="bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent font-medium">
+      Cricket
+    </span>,  
+    <span class="bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent font-medium">
+      Drawing
+    </span>, and  
+    <span class="bg-gradient-to-r from-sky-400 to-indigo-500 bg-clip-text text-transparent font-medium">
+      Gaming
+    </span>.  
+
+    <br/><br/>
+
+    <span class="bg-gradient-to-r from-cyan-300 via-fuchsia-400 to-pink-500 bg-clip-text text-transparent font-bold text-xl sm:text-2xl">
+      Tech enthusiast • Curious learner • Creative mind ✨
+    </span>
+
+  </div>
+`;
 
 
 export const ABOUT_DATA = [
@@ -299,8 +294,8 @@ export const STATS = [
     link: "https://leetcode.com/u/Beingankur0073/",
     des: "Knight",
     image: lc,
-    rating: "2009",
-    count: "1150",
+    rating: "2062",
+    count: "1167",
     badgeImg: knight,
     colors: ['#F89F1B', '#000000'] // Vibrant orange to black gradient
   },
@@ -406,8 +401,8 @@ export const techPairs = [
     back: <SiCloudinary data-tooltip-id="my-tooltip" data-tooltip-content="Cloudinary" className="text-4xl md:text-6xl text-blue-400" />,
   },
   {
-    frontRing: "ring-yellow-300",
-    frontShadow: "shadow-yellow-300/40",
+    frontRing: "ring-blue-300",
+    frontShadow: "shadow-blue-300/40",
     backRing: "ring-pink-400",
     backShadow: "shadow-pink-400/40",
     duration: 3.1,

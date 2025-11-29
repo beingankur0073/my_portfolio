@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,16 +9,16 @@
 :root{
   font-family: "Inter",sans-serif;
 }
-.rd3t-link {
-  stroke: #ffffff !important;
-  stroke-width: 2px !important;
+.font-mono {
+  letter-spacing: -0.5px;
 }
 
+
 .custom-tooltip {
-  background-color: #1f2937;  /* bg-gray-800 */
-  color: #f3f4f6;             /* text-gray-100 */
-  font-size: 1rem;            /* text-lg */
-  padding: 6px 12px;          /* px-3 py-1.5 */
+  background-color: #1f2937;
+  color: #f3f4f6;
+  font-size: 1rem;
+  padding: 6px 12px;
   border-radius: 0.5rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 50;
@@ -27,17 +29,58 @@
     filter: brightness(1);
   }
   50% {
-    filter: brightness(2); /* Increase brightness to pulse */
+    filter: brightness(3); /* Increase brightness to pulse */
   }
 }
 
 .animate-gradient-bg {
-  background: radial-gradient(circle 500px at 50% 200px, #062355, transparent);
+  background: radial-gradient(circle 500px at 50% 250px, #062355, transparent);
   animation: animated-gradient 3s ease-in-out infinite alternate;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .animate-gradient-bg {
+    background: radial-gradient(circle 350px at 50% 200px, #062355, transparent);
+  }
+}
 
+/* Mobile */
+@media (max-width: 640px) {
+  .animate-gradient-bg {
+    background: radial-gradient(circle 500px at 50% 250px, #062355, transparent);
+  }
+}
 
+/* Very small devices */
+@media (max-width: 420px) {
+  .animate-gradient-bg {
+    background: radial-gradient(circle 180px at 50% 100px, #062355, transparent);
+  }
+}
+.grid-overlay {
+  pointer-events: none;
+  z-index: 50;
 
+  /* MUCH stronger lines */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.4) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(255,255,255,0.35) 2px, transparent 2px);
 
+  background-size: 50px 50px;
 
+  /* Forces visibility on ALL backgrounds */
+  mix-blend-mode: soft-light;
+
+  /* Entire grid becomes brighter */
+  opacity: 0.9;
+}
+
+@keyframes grid-move {
+  from { background-position: 0 0; }
+  to { background-position: 50px 50px; }
+}
+
+.animate-grid {
+  animation: grid-move 40s linear infinite;
+}

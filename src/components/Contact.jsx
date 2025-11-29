@@ -2,7 +2,7 @@ import { CONTACT } from "../constants/index.jsx";
 import { motion } from "framer-motion"
 
 const Contact=()=>{
-    return <div className="border-b border-neutral-900 pb-5">
+    return <div className="border-b border-neutral-900 pb-5 font-mono">
 
         <motion.h1 
         whileInView={{opacity:1,y:0}}

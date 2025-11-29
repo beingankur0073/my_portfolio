@@ -8,7 +8,7 @@ import { techPairs } from "../constants/index.jsx"
 const Technologies = () => {
   
   return (
-    <div className="border-b border-neutral-800 pb-24 flex flex-col items-center justify-center">
+    <div className="border-b border-neutral-800 pb-24 flex flex-col items-center justify-center font-mono">
       <ReactTooltip id="my-tooltip" effect="solid" place="top" className="custom-tooltip" />
       <AnimatedHeading
         words={["Technologies", "Skills", "Languages", "Tools"]}

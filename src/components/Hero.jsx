@@ -23,13 +23,14 @@ const Hero=()=>{
                     initial="hidden"
                     animate="visible"
                     className="pb-16 text-6xl font-thin tracking-tigh lg:mt-26 lg:text-8xl">
-                        Ankur Mukherjee</motion.h1>
+                        Ankur Mukherjee
+                    </motion.h1>
 
                     <motion.div
                     variants={container(0.5)}
                     initial="hidden"
                     animate="visible"
-                    className="text-center"
+                    className="text-center font-mono"
                     >
                     <AnimatedHeading
                         words={["Competitive Programmar", "Data Science Enthusiast", "Tech Lover","Full Stack Developer"]}
@@ -44,7 +45,7 @@ const Hero=()=>{
                          variants={container(1)}
                          initial="hidden"
                          animate="visible"
-                    className='my-2 max-w-xl py-6 font-light tracking-tighter'>
+                    className=' max-w-xl py-5 font-light tracking-tighter '>
                         <p dangerouslySetInnerHTML={{ __html: HERO_CONTENT }} />
                     </motion.p>
 
