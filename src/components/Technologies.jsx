@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import AnimatedHeading from "./utils/AnimateHeading.jsx";
-import FlippingTechBox from "./utils/FlippingTechBox.jsx";
+import AnimatedHeading from "./ui/AnimateHeading.jsx";
+import FlippingTechBox from "./ui/FlippingTechBox.jsx";
 import { techPairs } from "../constants/index.jsx"
 
 
