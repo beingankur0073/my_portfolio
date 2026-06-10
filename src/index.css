@@ -1,86 +1,94 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import "tailwindcss";
 
+@theme {
+  /* 🌐 Primary Font Mapping */
+  --font-sans: "Inter", sans-serif;
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  /* 🎨 Shadcn UI Semantic Tokens for Tailwind v4 Compatibility */
+  --color-background: #080808;
+  --color-foreground: #f5f5f5;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #080808;
+  --color-accent: rgba(255, 255, 255, 0.07);
+  --color-accent-foreground: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: rgba(255, 255, 255, 0.1);
+  --color-ring: #38bdf8;
 
-:root{
-  font-family: "Inter",sans-serif;
-}
-.font-mono {
-  letter-spacing: -0.5px;
-}
+  /* 🎬 Animations */
+  --animate-cosmicglow: cosmicglow 3s ease-in-out infinite alternate;
+  --animate-movinggrid: movinggrid 40s linear infinite;
 
-
-.custom-tooltip {
-  background-color: #1f2937;
-  color: #f3f4f6;
-  font-size: 1rem;
-  padding: 6px 12px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 50;
-}
-
-@keyframes animated-gradient {
-  0%, 100% {
-    filter: brightness(1);
+  @keyframes cosmicglow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(3); }
   }
-  50% {
-    filter: brightness(3); /* Increase brightness to pulse */
+  @keyframes movinggrid {
+    from { background-position: 0 0; }
+    to { background-position: 50px 50px; }
   }
 }
 
-.animate-gradient-bg {
-  background: radial-gradient(circle 500px at 50% 250px, #062355, transparent);
-  animation: animated-gradient 3s ease-in-out infinite alternate;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .animate-gradient-bg {
-    background: radial-gradient(circle 350px at 50% 200px, #062355, transparent);
+/* -------------------------------------------------------------------------- */
+/* Global Base Layout Style Settings                                          */
+/* -------------------------------------------------------------------------- */
+@layer base {
+  html, body {
+    font-family: var(--font-sans);
+    background-color: #080808;
+    @apply text-neutral-300 antialiased min-h-screen overflow-x-hidden selection:bg-cyan-300 selection:text-cyan-900;
   }
 }
 
-/* Mobile */
-@media (max-width: 640px) {
+/* -------------------------------------------------------------------------- */
+/* Core Visual Overlays & Utilities                                           */
+/* -------------------------------------------------------------------------- */
+@layer utilities {
+  /* The pulsing deep-blue cosmic radial core background layer */
   .animate-gradient-bg {
     background: radial-gradient(circle 500px at 50% 250px, #062355, transparent);
+    
+    /* 📱 Standard Tailwind v4 media queries handling your custom responsive breakpoints */
+    @media (max-width: 1024px) {
+      background: radial-gradient(circle 350px at 50% 200px, #062355, transparent);
+    }
+    @media (max-width: 640px) {
+      background: radial-gradient(circle 500px at 50% 250px, #062355, transparent);
+    }
+    @media (max-width: 420px) {
+      background: radial-gradient(circle 180px at 50% 100px, #062355, transparent);
+    }
+  }
+
+  /* High-fidelity architectural geometric wireframe grid overlay */
+  .grid-overlay {
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.4) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.35) 2px, transparent 2px);
+    background-size: 50px 50px;
+    mix-blend-mode: soft-light;
+    opacity: 0.9;
+    z-index: 50;
+  }
+
+  /* Monospace tracking correction */
+  .font-mono {
+    letter-spacing: -0.5px;
+  }
+
+  /* Custom component tooltips */
+  .custom-tooltip {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 50;
   }
 }
-
-/* Very small devices */
-@media (max-width: 420px) {
-  .animate-gradient-bg {
-    background: radial-gradient(circle 180px at 50% 100px, #062355, transparent);
-  }
-}
-.grid-overlay {
-  pointer-events: none;
-  z-index: 50;
-
-  /* MUCH stronger lines */
-  background-image:
-    linear-gradient(rgba(255,255,255,0.4) 2px, transparent 2px),
-    linear-gradient(90deg, rgba(255,255,255,0.35) 2px, transparent 2px);
-
-  background-size: 50px 50px;
-
-  /* Forces visibility on ALL backgrounds */
-  mix-blend-mode: soft-light;
-
-  /* Entire grid becomes brighter */
-  opacity: 0.9;
-}
-
-@keyframes grid-move {
-  from { background-position: 0 0; }
-  to { background-position: 50px 50px; }
-}
-
-.animate-grid {
-  animation: grid-move 40s linear infinite;
+html {
+  scroll-behavior: smooth;
 }

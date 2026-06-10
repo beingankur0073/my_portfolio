@@ -266,23 +266,25 @@ export const EDUCATION = [
   {
     title: "Secondary",
     image: ns,
+    result: "87.8%",
     description:
-      "2019|National Model High School",
+      "2019 | National Model High School",
     address:"Michaelnagar,Dumdum Kolkata-700133"
   },
   {
     title: "Higher Secondary",
     image: hs,
+    result: "80.4%",
     description:
-      "2021|Michealnagar Sikshaniketan(H.S)",
+      "2021 | Michealnagar Sikshaniketan(H.S)",
     address:"Michaelnagar,Dumdum Kolkata-700133"
   },
   {
     title: "Bachelor of Technology",
     image: college,
-
+    result: "7.56 CGPA",
     description:
-      "2026|IIEST Shibpur(Information Technology)",
+      "2026 | IIEST Shibpur(Information Technology)",
       address:"Shibpur,Howrah Kolkata-711103"
   },
 
@@ -321,7 +323,7 @@ export const STATS = [
   },
 ];
 
-export const RESUME_LINK="https://drive.google.com/file/d/1s4GkGTfy7uHDxaWOVaE-xPGlUQ-85KL0/view";
+export const RESUME_LINK="https://drive.google.com/file/d/1RmgG9N6ZFSTURxMGb_DStS6KCIkWLUO5/view";
 
 
 
